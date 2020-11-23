@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Build .NET proj') {
       steps {
-        bat "dotnet build 'Search Engines\\Lab 1.1. PostgreSQL\\Lab 1.1. PostgreSQL\\Lab 1.1. PostgreSQL.csproj"'"
+        bat "dotnet build 'Search Engines\\Lab 1.1. PostgreSQL\\Lab 1.1. PostgreSQL\\Lab 1.1. PostgreSQL.csproj'"
       }
     }
   }
