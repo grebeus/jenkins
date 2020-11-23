@@ -2,7 +2,6 @@ pipeline {
   agent {
       node {
           label 'slave'
-          customWorkspace 'F:\MsDP\DevOps\Jenkins'
       }
   }
     stage('Checkout external proj') {
