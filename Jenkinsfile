@@ -13,13 +13,13 @@ pipeline {
     }
     stage('Build .NET proj') {
       steps {
-        bat "dotnet build 'Search Engines\\Lab 2. Boolean\\Lab 2. Boolean.csproj'"
+        bat "dotnet build 'Search Engines\\Lab 1.1. PostgreSQL\\Lab 1.1. PostgreSQL\\Lab 1.1. PostgreSQL.csproj"'"
       }
     }
   }
   post {
     always {
-      emailext body: 'Build completed', recipientProviders: ['sergii_grebenovych@epam.com'], subject: 'Build Notification'
+      emailext body: 'Build completed', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Build Notification'
     }
   }
 }
