@@ -1,7 +1,7 @@
 pipeline {
   agent {
       node {
-          label 'my-defined-label'
+          label 'slave'
           customWorkspace 'F:\MsDP\DevOps\Jenkins'
       }
   }
