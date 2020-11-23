@@ -4,10 +4,12 @@ pipeline {
           label 'slave'
       }
   }
+  stages {
     stage('Checkout external proj') {
-        steps {
-            git branch: 'master',
-                url: 'https://github.com/grebeus/naukma.git'
-        }
+      steps {
+          git branch: 'master',
+              url: 'https://github.com/grebeus/naukma.git'
+      }
     }
+  }
 }
