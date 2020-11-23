@@ -19,7 +19,10 @@ pipeline {
   }
   post {
     always {
-      emailext body: 'Build completed', recipientProviders: [[$class: 'DevelopersRecipientProvider'], "sergii_grebenovych@epam.com"], subject: 'Build Notification'
+      emailext to: 'sergii_grebenovych@epam.com', 
+               body: 'Build completed', 
+               recipientProviders: [[$class: 'DevelopersRecipientProvider']], 
+               subject: 'Jenkins Notification'
     }
   }
 }
