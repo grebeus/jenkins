@@ -12,7 +12,7 @@ pipeline {
       }
     }
     stage('Build .NET proj') {
-      
+      bat "dotnet build 'Search Engines\\Lab 2. Boolean\\Lab 2. Boolean.csproj'"
     }
   }
   post {
