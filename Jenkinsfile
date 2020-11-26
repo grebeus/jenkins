@@ -13,7 +13,9 @@ pipeline {
     }
     stage('Build .NET proj') {
       steps {
+        bat "dotnet-sonarscanner begin /k:\"sonarkey\" /d:sonar.host.url=\"http://172.21.203.210:9000\" /d:sonar.login=\"476495d6e6bcd25c58b84f10d76d978b0213239d\""
         bat "dotnet build \"Search Engines\\Lab 1. Dictionary\\Lab 1. Dictionary.csproj\""
+        bar "dotnet-sonarscanner end /d:sonar.login=\"476495d6e6bcd25c58b84f10d76d978b0213239d\""
       }
     }
   }
